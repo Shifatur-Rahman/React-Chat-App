@@ -1,0 +1,102 @@
+.MuiGrid-root {
+  padding: 0;
+}
+.registration_part .box {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 70px;
+  margin-top: 225px;
+}
+
+.registration_part h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 47px;
+  color: #11175d;
+  margin: 0;
+}
+
+.registration_part p {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #c3c5d7;
+  margin: 0;
+}
+
+.registration_part .MuiFormHelperText-root {
+  color: red;
+  font-size: 16px;
+}
+
+.registration_part .MuiGrid-root {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Login page */
+.registration_part .popupMsg {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #03014c;
+  font-family: "Open Sans", sans-serif;
+}
+
+.registration_part .popupMsg Link {
+  color: #ea6c00;
+  cursor: pointer;
+}
+
+.login_part .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.23) !important;
+  border-radius: 0;
+}
+
+.registration_part .inputOption {
+  display: flex;
+}
+.registration_part .option {
+  font-family: "Open sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 20px 40px;
+  padding-left: 92px;
+  border: 1px solid rgba(3, 1, 76, 0.083);
+  margin-top: 30px;
+  margin-right: 20px;
+  border-radius: 9px;
+  position: relative;
+  cursor: pointer;
+}
+
+.registration_part .option img {
+  position: absolute;
+  top: 18px;
+  left: 62px;
+}
+
+.registration_part .popupMsg a {
+  display: inline-block;
+  font-family: "Open sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ea6c00;
+  text-decoration: none;
+}
+
+.registration_part .eye {
+  position: relative;
+  width: 372px;
+}
+
+.registration_part .eyeIcon {
+  position: absolute;
+  bottom: 19px;
+  right: 0;
+  cursor: pointer;
+}
