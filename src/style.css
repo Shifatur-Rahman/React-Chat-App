@@ -59,6 +59,7 @@
 
 .registration_part .inputOption {
   display: flex;
+  margin-bottom: 20px;
 }
 .registration_part .option {
   font-family: "Open sans", sans-serif;

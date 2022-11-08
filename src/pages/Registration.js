@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import { Grid, Button, TextField } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Grid, Button, TextField, Alert } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+} from "firebase/auth";
 const Registration = () => {
+  const auth = getAuth();
+  let navigate = useNavigate();
+
   // Form state
 
   let [name, setName] = useState("");
@@ -16,6 +24,8 @@ const Registration = () => {
   let [passErr, setPassErr] = useState("");
   let [cofirmPassErr, setCofirmPassErr] = useState("");
   let [passLengthErr, setPassLengthErr] = useState("");
+  let [existEmailVerify, setExistEmailVerify] = useState("");
+  let [existEmailCheck, setExistEmailCheck] = useState(false);
 
   let submitHandle = (e) => {
     setNameErr("");
@@ -37,6 +47,28 @@ const Registration = () => {
       if (password !== confirmpassword) {
         setCofirmPassErr("Password don't match");
       }
+
+      //                    firebase
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((users) => {
+          sendEmailVerification(auth.currentUser).then(() => {
+            console.log("Email Send");
+          });
+          console.log(users);
+          navigate("/login");
+        })
+        .catch((err) => {
+          const errorCode = err.code;
+          console.log(errorCode);
+          let existEmailCheckErr = errorCode.includes("email");
+          if (existEmailCheckErr) {
+            setExistEmailVerify(
+              "Email already in used. Please try another email!"
+            );
+            setExistEmailCheck(true);
+          }
+        });
     }
   };
 
@@ -48,7 +80,17 @@ const Registration = () => {
             <div className="box">
               <div className="register-left">
                 <h1>Get started with easily register</h1>
-                <p>Free register and you can enjoy it</p>
+                <p style={{ marginBottom: "20px" }}>
+                  Free register and you can enjoy it
+                </p>
+
+                {existEmailCheck ? (
+                  <Alert variant="filled" severity="error">
+                    {existEmailVerify}
+                  </Alert>
+                ) : (
+                  ""
+                )}
 
                 <TextField
                   helperText={nameErr}
@@ -120,8 +162,7 @@ const Registration = () => {
                 </Button>
 
                 <p className="popupMsg">
-                  Already have an account ?{" "}
-                  <Link to="/login"> Login </Link>
+                  Already have an account ? <Link to="/login"> Login </Link>
                 </p>
               </div>
             </div>
