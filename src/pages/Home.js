@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { Alert, AlertTitle, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Leftbar from "../components/Leftbar";
 
 const Home = () => {
   const auth = getAuth();
@@ -22,7 +23,20 @@ const Home = () => {
   return (
     <>
       {verifyEmail ? (
-        <h1>home page</h1>
+        <Grid container spacing={2}>
+          <Grid item xs={2}>
+            <Leftbar active="home" />
+          </Grid>
+          <Grid item xs={4}>
+            mid 1
+          </Grid>
+          <Grid item xs={3}>
+            mid 2
+          </Grid>
+          <Grid item xs={3}>
+            right
+          </Grid>
+        </Grid>
       ) : (
         <Grid container spacing={2}>
           <Grid item xs={4}></Grid>

@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ol,
+li {
+  list-style: none;
+}
+
 .MuiGrid-root {
   padding: 0;
 }
@@ -61,6 +70,7 @@
   display: flex;
   margin-bottom: 20px;
 }
+
 .registration_part .option {
   font-family: "Open sans", sans-serif;
   font-size: 14px;
@@ -100,4 +110,66 @@
   bottom: 19px;
   right: 0;
   cursor: pointer;
+}
+
+/* home page */
+
+/* home page left bar */
+.leftbar {
+  background-color: #5f35f5;
+  height: 100vh;
+  margin: 35px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.leftbar .profilePic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 38px;
+  margin-bottom: 15px;
+}
+
+.leftbar li {
+  margin-top: 83px;
+  width: 161px;
+  /* height: 88px; */
+  padding: 20px 70px 20px 45px;
+  margin-left: auto;
+  border-radius: 20px 0 0 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.leftbar .active {
+  background: #fff;
+}
+
+.leftbar li::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  background: #5f35f5;
+  content: "";
+  border-radius: 25px 0 0 25px;
+}
+
+.leftbar .icon {
+  font-size: 46px;
+  color: #bad1ff;
+}
+
+.leftbar .active .icon {
+  color: #5f35f5;
+}
+
+.leftbar h4 {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
 }
