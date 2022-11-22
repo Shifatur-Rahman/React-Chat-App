@@ -132,7 +132,7 @@ li {
 }
 
 .leftbar li {
-  margin-top: 83px;
+  margin-top: 50px;
   width: 161px;
   /* height: 88px; */
   padding: 20px 70px 20px 45px;
@@ -172,4 +172,137 @@ li {
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
+}
+
+/* Search bar */
+.search {
+  margin-top: 35px;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  padding: 17px 78px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
+  border: 0;
+}
+
+.search .searchIcon {
+  position: absolute;
+  left: 23px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search .searchDotButton {
+  position: absolute;
+  right: 25px;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #5f35f5;
+}
+
+/* group request  */
+.groupList {
+  width: 100%;
+  height: 480px;
+  padding: 17px 78px;
+  box-sizing: border-box;
+  box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
+  border: 0;
+
+  overflow-y: scroll;
+  border-radius: 20px;
+  margin-top: 43px;
+}
+
+.friends {
+  height: 1080px;
+}
+.groupList .item-box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding-bottom: 13px;
+  margin-top: 17px;
+}
+
+.groupList .item-box:last-child {
+  border-bottom: 0 !important;
+}
+
+.groupList .item-box .item-img img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.groupList .item-box .item-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.groupList .item-box .item-btn button {
+  background-color: #5f35f5;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  border: 0;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.groupList h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000;
+}
+
+.groupList .item-name h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000;
+}
+
+.groupList .item-name h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(77, 77, 77, 0.75);
+}
+
+.friends .item-box .item-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.friends .item-box .item-btn p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.userList .item-box .item-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
