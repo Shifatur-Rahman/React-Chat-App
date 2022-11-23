@@ -185,9 +185,9 @@ li {
   padding: 17px 78px;
   box-sizing: border-box;
   border-radius: 20px;
-  box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 9px 12px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 9px 12px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 9px 12px -8px rgba(0, 0, 0, 0.75);
   border: 0;
 }
 
@@ -213,9 +213,9 @@ li {
   height: 480px;
   padding: 17px 78px;
   box-sizing: border-box;
-  box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 9px 12px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 9px 12px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 9px 12px -8px rgba(0, 0, 0, 0.75);
   border: 0;
 
   overflow-y: scroll;
@@ -269,6 +269,13 @@ li {
   font-size: 20px;
   line-height: 30px;
   color: #000;
+}
+
+.groupList .item-name {
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-start; */
+  flex-direction: column;
 }
 
 .groupList .item-name h2 {
