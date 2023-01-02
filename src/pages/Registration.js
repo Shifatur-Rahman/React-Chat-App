@@ -64,7 +64,6 @@ const Registration = () => {
               // photoURL: "https://example.com/jane-q-user/profile.jpg",
             })
               .then(() => {
-                console.log("name set");
                 set(ref(db, "users/" + auth.currentUser.uid), {
                   username: name,
                   email: email,

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getDatabase, ref, onValue } from "firebase/database";
+import { getDatabase, ref, onValue, push, set } from "firebase/database";
 import { getAuth } from "firebase/auth";
 
 const UserList = () => {
@@ -12,6 +12,7 @@ const UserList = () => {
   useEffect(() => {
     const userRef = ref(db, "users");
     let userArr = [];
+    // firebase database read data (Regstration theke data anchi)
     onValue(userRef, (snapshot) => {
       snapshot.forEach((item) => {
         //console.log(item.key);
@@ -25,6 +26,17 @@ const UserList = () => {
     });
   }, []);
 
+  let handleRequest = (x) => {
+    console.log(x.username);
+    set(push(ref(db, "friendRequest/")), {
+      name: auth.currentUser.displayName,
+      email: auth.currentUser.email,
+      senderId: auth.currentUser.uid,
+      receiverId: x.id,
+    });
+    console.log(x);
+  };
+  //console.log(userlist);
   return (
     <>
       <div className="groupList friends userList">
@@ -42,7 +54,7 @@ const UserList = () => {
                   <h5>{item.id}</h5>
                 </div>
                 <div className="item-btn">
-                  <button> + </button>
+                  <button onClick={() => handleRequest(item)}> + </button>
                 </div>
               </div>
             )
